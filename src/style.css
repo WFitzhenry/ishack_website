@@ -1,0 +1,242 @@
+:root {
+  --bg: #000000;
+  --surface: #0f0f0f;
+  --surface-border: #262626;
+  --text: #f5f5f5;
+  --muted: #cfcfcf;
+  --accent: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+body {
+  min-width: 320px;
+}
+
+#app {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  border-bottom: 1px solid var(--surface-border);
+  backdrop-filter: blur(8px);
+}
+
+.site-nav {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 100px;
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.menu-link,
+.projects-menu > summary {
+  color: var(--text);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.projects-menu {
+  position: relative;
+}
+
+.projects-menu > summary {
+  list-style: none;
+}
+
+.projects-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.projects-menu > summary::after {
+  content: " \25BE";
+  font-size: 0.72rem;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  right: 0;
+  width: min(300px, 85vw);
+  margin: 0;
+  padding: 0.6rem;
+  list-style: none;
+  display: grid;
+  gap: 0.3rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 0.75rem;
+  background: #101010;
+}
+
+.dropdown-list a {
+  display: block;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.5rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.dropdown-list a:hover,
+.dropdown-list a:focus-visible {
+  color: var(--accent);
+  background: #1b1b1b;
+  outline: none;
+}
+
+main {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 3.5rem;
+}
+
+.landing,
+.projects-section,
+.contact-section {
+  border: 1px solid var(--surface-border);
+  border-radius: 1rem;
+  background: var(--surface);
+  padding: clamp(1.1rem, 2.5vw, 2rem);
+}
+
+.landing {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: center;
+}
+
+.landing-left {
+  min-width: 0;
+}
+
+.landing-right {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-image {
+  display: block;
+  width: min(100%, 380px);
+  height: auto;
+}
+
+.landing h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 5vw, 3.5rem);
+}
+
+.landing-subtitle {
+  margin: 0.25rem 0 1rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--text);
+  text-align: right;
+}
+
+.landing p {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.landing-emphasis {
+  text-align: center;
+}
+
+.projects-section,
+.contact-section {
+  margin-top: 1rem;
+}
+
+.projects-section h2,
+.contact-section h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.project-card {
+  margin-top: 0.85rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 0.7rem;
+  padding: 1rem;
+  background: #080808;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 760px) {
+  .site-nav {
+    min-height: 72px;
+    width: calc(100% - 1rem);
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .menu-right {
+    gap: 0.8rem;
+  }
+
+  .menu-link,
+  .projects-menu > summary {
+    font-size: 0.95rem;
+  }
+
+  main {
+    width: calc(100% - 1rem);
+    padding-top: 1rem;
+  }
+
+  .landing {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-right {
+    margin-top: 0.5rem;
+  }
+
+  .landing-image {
+    width: min(100%, 300px);
+  }
+}
