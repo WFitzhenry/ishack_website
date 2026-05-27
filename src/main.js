@@ -54,11 +54,74 @@ document.querySelector("#app").innerHTML = `
 			</div>
 		</section>
 
-		<section class="projects-section" aria-labelledby="projects-title">
-			<h2 id="projects-title">Projects</h2>
+		<section class="project-list" aria-label="Projects">
 
 			<article class="project-card" id="free-basic-solar">
-				<h3>Free Basic Solar</h3>
+				<h2 class="project-title">Free Basic Solar</h2>
+				<p class="project-tagline"><em>Capital grant + municipal operations subsidy</em></p>
+				<img src="/free_basic_solar.png" alt="Free Basic Solar project" class="project-image-float" />
+				<h3 class="project-subheader project-subheader-lead">The demonstration</h3>
+						<p>
+							From 2013 to 2022, the iShack Project delivered free solar electricity to over 2,000
+							households in an informal settlement in Stellenbosch, while the community waited for
+							grid-electrification from the municipality. It remains our largest demonstration to date. As
+							in all of our projects, the level of energy utility is modest: safe lighting, media access,
+							and cell-phone charging. But we know from feedback and observation that even this modest
+							intervention significantly improves the quality and safety of home life for our clients.
+						</p>
+
+						<h4 class="project-subheader">The financial model</h4>
+						<p>
+							Two funding streams made it work. The DBSA Green Fund provided a capital grant covering
+							system procurement. Stellenbosch Municipality covered ongoing operations through a service
+							contract - funded by a critical policy innovation: the municipality amended its indigent
+							policy so that households not yet connected to the grid could receive their Free Basic
+							Electricity entitlement as a rand-equivalent contribution towards a solar service. The
+							municipality then put the service out to tender, which iShack bid for and won.
+						</p>
+						<p>
+							Households paid a once-off joining fee toward installation costs, signed a service
+							agreement, and received free use of a Solar Home System - enough low-voltage power for
+							indoor and outdoor lighting, cell-phone charging, and small media devices (TV, radio,
+							tablet). The service was sustained for nine years until the community finally received
+							grid-electrification.
+						</p>
+
+						<h4 class="project-subheader">What we built - and why it mattered</h4>
+						<p>
+							Rather than treating this as a short-term infrastructure rollout, we operated it as a more
+							sustainable customer-oriented energy utility: we trained community members as iShack
+							Agents who handled marking and sign-ups, installations, and long-term maintenance. We
+							also developed a range of customer-management and support-systems and resources to
+							maintain a consistent service.
+						</p>
+						<p>
+							That service-oriented approach - the systems, processes, the training, the continuous
+							learning culture - has carried forward into every subsequent iShack model.
+						</p>
+
+						<h4 class="project-subheader">How can this be replicated and scaled (and should it)?</h4>
+						<p>
+							South Africa's Integrated National Electrification Programme (INEP) already provides
+							capital funding for off-grid electrification. This funding has historically focused on
+							rural areas, but more recently INEP have undertaken to include urban communities that
+							cannot be cost-effectively grid-connected in the near-term. Where INEP or equivalent
+							capital funding is available, it significantly improves financial viability.
+						</p>
+						<p>
+							But capital grants are not the only route; a meaningful monthly contribution drawn from
+							the state-funding for Free Basic Services (ie the Equitable Share), combined with
+							affordable household co-payments, could be sufficient to roll out and sustain solar energy
+							services in dense informal settlements - without an upfront capital grant.
+						</p>
+						<p>
+							There is a practical argument for pursuing this funding-light approach: communities that
+							receive capital grants for solar electrification risk being deemed already served and
+							subsequently deprioritised for full grid connection. Structuring the model around
+							operational subsidies rather than capital grants avoids that trap, keeping households'
+							long-term claim to grid electrification intact. See, for example, our latest Basic Solar
+							Grant Project.
+						</p>
 			</article>
 
 			<article class="project-card" id="subsidised-rent-to-own">
