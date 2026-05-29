@@ -20,21 +20,28 @@ document.querySelector("#app").innerHTML = `
     <section class="project-list" aria-label="Contact details">
       <article class="project-card" id="contact-card">
         <h2 class="project-title">Contact</h2>
+        <p class="contact-intro">Get in touch with the iShack Project team.</p>
+
         <div class="contact-logo-row" aria-label="Partner logos">
           <img src="/logos/ishack_logo.png" alt="iShack logo" class="contact-logo" />
           <img src="/logos/isolar_logo.png" alt="iSolar logo" class="contact-logo" />
           <img src="/logos/siil_logo.png" alt="SIIL logo" class="contact-logo" />
         </div>
-        <p>
+
+        <p class="contact-org">
           The iShack Project, a project of The Sustainability Institute Innovation Lab (Pty) Ltd
         </p>
-        <p>
-          <strong>Contact:</strong>
-          <a class="menu-link" href="mailto:damian@ishackproject.org.za">damian@ishackproject.org.za</a>
-        </p>
-        <p>
-          <strong>iShack Customer Hotline:</strong> +27 71 837 1370
-        </p>
+
+        <div class="contact-methods" aria-label="Contact options">
+          <a class="contact-method" href="mailto:damian@ishackproject.org.za">
+            <span class="contact-method-label">Contact</span>
+            <span class="contact-method-value">damian@ishackproject.org.za</span>
+          </a>
+          <a class="contact-method" href="tel:+27718371370">
+            <span class="contact-method-label">iShack Customer Hotline</span>
+            <span class="contact-method-value">+27 71 837 1370</span>
+          </a>
+        </div>
       </article>
     </section>
   </main>

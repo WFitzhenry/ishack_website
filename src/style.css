@@ -27,6 +27,8 @@ body {
 #app {
   min-height: 100vh;
   background: var(--bg);
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header {
@@ -119,6 +121,7 @@ main {
   width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 1.5rem 0 3.5rem;
+  flex: 1;
 }
 
 .site-footer {
@@ -354,6 +357,61 @@ main {
   object-fit: contain;
 }
 
+#contact-card {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+#contact-card .project-title {
+  margin-bottom: 0.2rem;
+}
+
+.contact-intro {
+  margin: 0.35rem 0 0.7rem;
+  color: var(--muted);
+}
+
+.contact-org {
+  margin: 0.8rem 0 0;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.contact-method {
+  display: block;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 0.8rem;
+  text-decoration: none;
+  color: var(--text);
+  background: #121212;
+}
+
+.contact-method:hover,
+.contact-method:focus-visible {
+  border-color: #3a3a3a;
+  background: #171717;
+  outline: none;
+}
+
+.contact-method-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.contact-method-value {
+  display: block;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .project-card::after {
   content: "";
   display: block;
@@ -435,6 +493,10 @@ main {
   .comparison-item {
     width: min(100%, 520px);
     margin: 0 auto;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
   }
 
   .gallery-mosaic {
