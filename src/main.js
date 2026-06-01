@@ -102,7 +102,7 @@ document.querySelector("#app").innerHTML = `
 				</p>
 			</div>
 			<div class="landing-right">
-				<img src="/ishack_lightbulb.png" alt="Illuminated lightbulb" class="landing-image" />
+				<img src="/Girl_with_light.jpg" alt="Illuminated lightbulb" class="landing-image" />
 			</div>
 		</section>
 

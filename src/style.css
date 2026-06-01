@@ -5,6 +5,10 @@
   --text: #f5f5f5;
   --muted: #cfcfcf;
   --accent: #ffffff;
+  --solar-accent: #e6f61b;
+  --solar-accent-2: #f6ca2a;
+  --solar-accent-3: #f7550d;
+  --solar-accent-4: #01b050;
 }
 
 * {
@@ -69,7 +73,8 @@ body {
 .menu-link,
 .projects-menu > summary {
   color: var(--text);
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: none;
   cursor: pointer;
@@ -108,6 +113,58 @@ body {
   border-radius: 0.5rem;
   color: var(--muted);
   text-decoration: none;
+}
+
+.dropdown-list a[href="#free-basic-solar"] {
+  color: var(--solar-accent);
+  font-weight: 700;
+}
+
+.dropdown-list a[href="#free-basic-solar"]:hover,
+.dropdown-list a[href="#free-basic-solar"]:focus-visible {
+  color: var(--solar-accent);
+  background: #1b1b1b;
+  text-shadow: 0 0 0.35rem rgba(230, 246, 27, 0.35);
+  outline: none;
+}
+
+.dropdown-list a[href="#subsidised-rent-to-own"] {
+  color: var(--solar-accent-2);
+  font-weight: 700;
+}
+
+.dropdown-list a[href="#subsidised-rent-to-own"]:hover,
+.dropdown-list a[href="#subsidised-rent-to-own"]:focus-visible {
+  color: var(--solar-accent-2);
+  background: #1b1b1b;
+  text-shadow: 0 0 0.35rem rgba(246, 202, 42, 0.35);
+  outline: none;
+}
+
+.dropdown-list a[href="#un-subsidised-help-to-buy"] {
+  color: var(--solar-accent-3);
+  font-weight: 700;
+}
+
+.dropdown-list a[href="#un-subsidised-help-to-buy"]:hover,
+.dropdown-list a[href="#un-subsidised-help-to-buy"]:focus-visible {
+  color: var(--solar-accent-3);
+  background: #1b1b1b;
+  text-shadow: 0 0 0.35rem rgba(247, 85, 13, 0.35);
+  outline: none;
+}
+
+.dropdown-list a[href="#basic-solar-grant"] {
+  color: var(--solar-accent-4);
+  font-weight: 700;
+}
+
+.dropdown-list a[href="#basic-solar-grant"]:hover,
+.dropdown-list a[href="#basic-solar-grant"]:focus-visible {
+  color: var(--solar-accent-4);
+  background: #1b1b1b;
+  text-shadow: 0 0 0.35rem rgba(1, 176, 80, 0.35);
+  outline: none;
 }
 
 .dropdown-list a:hover,
@@ -187,13 +244,13 @@ main {
 
 .landing-image {
   display: block;
-  width: min(100%, 380px);
+  width: min(100%, 500px);
   height: auto;
 }
 
 .landing h1 {
   margin: 0;
-  font-size: clamp(1.9rem, 5vw, 3.5rem);
+  font-size: clamp(1.6rem, 4vw, 2.9rem);
 }
 
 .landing-subtitle {
@@ -212,6 +269,11 @@ main {
 
 .landing-emphasis {
   text-align: center;
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
 }
 
 .project-list,
@@ -242,6 +304,22 @@ main {
 .project-title {
   margin: 0;
   font-size: clamp(1.45rem, 3.5vw, 2.5rem);
+}
+
+#free-basic-solar .project-title {
+  color: var(--solar-accent);
+}
+
+#subsidised-rent-to-own .project-title {
+  color: var(--solar-accent-2);
+}
+
+#un-subsidised-help-to-buy .project-title {
+  color: var(--solar-accent-3);
+}
+
+#basic-solar-grant .project-title {
+  color: var(--solar-accent-4);
 }
 
 .project-card .project-tagline {
@@ -416,6 +494,10 @@ main {
   content: "";
   display: block;
   clear: both;
+}
+
+main img:not(.landing-image):not(.gallery-image) {
+  border: 1px solid #ffffff;
 }
 
 .gallery-mosaic {

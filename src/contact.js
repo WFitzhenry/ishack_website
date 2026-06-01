@@ -25,7 +25,7 @@ document.querySelector("#app").innerHTML = `
         <div class="contact-logo-row" aria-label="Partner logos">
           <img src="/logos/ishack_logo.png" alt="iShack logo" class="contact-logo" />
           <img src="/logos/isolar_logo.png" alt="iSolar logo" class="contact-logo" />
-          <img src="/logos/siil_logo.png" alt="SIIL logo" class="contact-logo" />
+          <img src="/logos/siil_black_border.png" alt="SIIL logo" class="contact-logo" />
         </div>
 
         <p class="contact-org">
