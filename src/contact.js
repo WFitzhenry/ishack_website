@@ -1,8 +1,11 @@
 import "./style.css";
+import { backup, loadContent } from "./content.js";
 
 const currentYear = new Date().getFullYear();
 
-document.querySelector("#app").innerHTML = `
+function renderContact(c) {
+  const cc = c.contact;
+  document.querySelector("#app").innerHTML = `
   <header class="site-header" id="top">
     <nav class="site-nav" aria-label="Main navigation">
       <a class="logo-link" href="/" aria-label="iShack home">
@@ -19,8 +22,8 @@ document.querySelector("#app").innerHTML = `
   <main>
     <section class="project-list" aria-label="Contact details">
       <article class="project-card" id="contact-card">
-        <h2 class="project-title">Contact</h2>
-        <p class="contact-intro">Get in touch with the iShack Project team.</p>
+        <h2 class="project-title">${cc.title}</h2>
+        <p class="contact-intro">${cc.intro}</p>
 
         <div class="contact-logo-row" aria-label="Partner logos">
           <img src="/logos/ishack_logo.png" alt="iShack logo" class="contact-logo" />
@@ -28,18 +31,16 @@ document.querySelector("#app").innerHTML = `
           <img src="/logos/siil_black_border.png" alt="SIIL logo" class="contact-logo" />
         </div>
 
-        <p class="contact-org">
-          The iShack Project, a project of The Sustainability Institute Innovation Lab (Pty) Ltd
-        </p>
+        <p class="contact-org">${cc.org_name}</p>
 
         <div class="contact-methods" aria-label="Contact options">
-          <a class="contact-method" href="mailto:damian@ishackproject.org.za">
-            <span class="contact-method-label">Contact</span>
-            <span class="contact-method-value">damian@ishackproject.org.za</span>
+          <a class="contact-method" href="${cc.contact_1_href}">
+            <span class="contact-method-label">${cc.contact_1_label}</span>
+            <span class="contact-method-value">${cc.contact_1_value}</span>
           </a>
-          <a class="contact-method" href="tel:+27718371370">
-            <span class="contact-method-label">iShack Customer Hotline</span>
-            <span class="contact-method-value">+27 71 837 1370</span>
+          <a class="contact-method" href="${cc.contact_2_href}">
+            <span class="contact-method-label">${cc.contact_2_label}</span>
+            <span class="contact-method-value">${cc.contact_2_value}</span>
           </a>
         </div>
       </article>
@@ -53,3 +54,14 @@ document.querySelector("#app").innerHTML = `
     </a>
   </footer>
 `;
+}
+
+// Render immediately with backup content — zero loading delay.
+renderContact(backup);
+
+// Fetch live content from Google Sheets and re-render if successful.
+loadContent()
+  .then((live) => renderContact(live))
+  .catch(() => {
+    // Backup content is already rendered — nothing to do.
+  });
